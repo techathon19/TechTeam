@@ -17,7 +17,7 @@ mongoose
   .catch(err => console.log(err));
 
 // Express body parser
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 
 // EJS
 app.use(expressLayouts);
@@ -31,7 +31,7 @@ const PORT = process.env.PORT || 3000;
 
 // Routes
 app.use('/', router);
-app.use('/promotions', require('./routes/promotion'));
+app.use('/users', require('./routes/users.js'));
 
 
 
